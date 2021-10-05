@@ -22,7 +22,7 @@ contacts: [
   }
   addContact = (task) => {
 
-    const searchSameName = this.state.contacts.map((cont) => cont.name).includes(task.name);
+    const searchSameName = this.state.contacts.find((cont) => cont.name).includes(task.name);
     
     if (searchSameName) {
       alert(`${task.name} is already in contacts` )
@@ -30,6 +30,7 @@ contacts: [
     else if (task.name.length === 0) {
       
       alert("Fields must be filled!");
+      
     }
       
       else {
