@@ -22,7 +22,7 @@ contacts: [
   }
   addContact = (task) => {
 
-    const searchSameName = this.state.contacts.find((cont) => cont.name).includes(task.name);
+    const searchSameName = this.state.contacts.find((contact) => contact.name === task)
     
     if (searchSameName) {
       alert(`${task.name} is already in contacts` )
